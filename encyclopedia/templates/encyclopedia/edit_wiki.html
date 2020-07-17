@@ -1,0 +1,20 @@
+
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    You are editing the {{ title }} entry  on Chikipedia
+{% endblock %}
+
+{% block body %}
+<h1> You are editing the {{title }} entry on Chikipedia</h1>
+
+    <form name="myform" method="post" action= "{% url 'edit' title %}">
+      {% csrf_token %}
+      
+        {{form}}
+        <input type="submit" class="btn btn-primary" value="Save">
+    </form>
+
+</br>
+
+{% endblock %}

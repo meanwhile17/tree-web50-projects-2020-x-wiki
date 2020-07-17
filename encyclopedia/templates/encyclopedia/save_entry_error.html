@@ -1,0 +1,17 @@
+
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }} entry already exists in Chikipedia
+{% endblock %}
+
+{% block body %}
+<h1> We were not able to create {{title}}.  It already exists in Chikipedia</h1>
+
+    <<p>
+        We cannot create {{title}} in Chikipedia. This entry already exists.
+    </p>>
+
+
+
+{% endblock %}
